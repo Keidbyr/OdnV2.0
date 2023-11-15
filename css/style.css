@@ -102,7 +102,20 @@ img {
 	max-width: 620px;
 	color: #fff;
 }
-
+.cube_registration{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+}
+.request_form {
+  background-color: #FFD723;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
 .hero-subtitle {
 	display: inline-block;
 	margin-bottom: 20px;
