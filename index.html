@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webovio</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" id="theme-css" href="css/style.css">
 </head>
 <body class>
 <header class="header">
@@ -28,11 +26,12 @@
                 <ul class="menu" id="menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About us</a></li>
-                    <li><a href="#">sth</a>></li>
+                    <li><a href="/profile">sth</a>></li>
                 </ul>
             </div>
         </div>
         <div class="popup" id="popup"></div>
+        <button id="theme-toggle-button">сменить тему</button>
     </div>
 </header>
 <main>
@@ -73,19 +72,20 @@
             <h3 class="services-subtitle">registration</h3>
             <div class = "cube_registration">
             <form class="my-form">
-                <label for="username">Логин:</label>
+                <label for="username" class="form_text">Логин:</label>
                 <input id="username" class="username" type="text" name="username" minlength="3" maxlength="20" required>
                 <br>
-                <label for="password">Пароль:</label>
+                <label for="password" class="form_text">Пароль:</label>
                 <input id="password" class="password" type="password" name="password" minlength="8" maxlength="20"
                        required>
                 <br>
-                <label for="confirmPassword">Повторите пароль:</label>
+                <label for="confirmPassword" class="form_text">Повторите пароль:</label>
                 <input id="confirmPassword" class="confirm-password" type="password" name="confirmPassword"
                        minlength="8" maxlength="20" required>
                 <br>
                 <button type="submit" class="request_form">Отправить</button>
             </form>
+
             </div>
             <ul class="services-list list-reset">
                 <li class="services-item">

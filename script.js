@@ -6,7 +6,17 @@ const form = document.querySelector('.my-form');
 const loginInput = form.querySelector('.username');
 const passwordInput = form.querySelector('.password');
 const confirmPasswordInput = form.querySelector('.confirm-password');
+const themeButton = document.getElementById('themeButton');
+const toggleButton = document.getElementById("theme-toggle-button");
+const themeLink = document.getElementById("theme-css");
 
+toggleButton.addEventListener("click", () => {
+    if (themeLink.getAttribute("href").includes("css/style.css")) {
+        themeLink.setAttribute("href", "css/darkstyle.css");
+    } else {
+        themeLink.setAttribute("href", "css/style.css");
+    }
+});
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   const login = loginInput.value;
