@@ -1,21 +1,17 @@
 {% extends "index.html" %}
 {% block content %}
+<body>
 <p>Имя: {{ username }}</p>
 <p>Пароль: {{ password }}</p>
-<head>
-    <title>Комментарии</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <h1>Комментарии</h1>
-    <form id="commentForm">
-        <input type="text" id="commentInput" placeholder="Введите комментарий">
-        <button type="submit">Отправить</button>
-    </form>
-
-    <ul id="commentList">
-    </ul>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<title>Комментарии</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<h1>Комментарии</h1>
+<form id="commentForm">
+    <input type="text" id="commentInput" placeholder="Введите комментарий">
+    <button type="submit">Отправить</button>
+</form>
+<ul id="commentList">
+</ul>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 {% endblock %}
