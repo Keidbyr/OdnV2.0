@@ -8,14 +8,19 @@ const passwordInput = form.querySelector('.password');
 const confirmPasswordInput = form.querySelector('.confirm-password');
 const themeButton = document.getElementById('themeButton');
 const toggleButton = document.getElementById("theme-toggle-button");
-const themeLink = document.getElementById("theme-css");
+const lightLink = document.getElementById("theme-css");
+const darkLink = document.getElementById("darktheme-css");
+var isButton1Enabled = true;
 
 toggleButton.addEventListener("click", () => {
-    if (themeLink.getAttribute("href").includes("css/style.css")) {
-        themeLink.setAttribute("href", "css/darkstyle.css");
+    if (isButton1Enabled) {
+        lightLink.disabled = true;
+        darkLink.disabled = false;
     } else {
-        themeLink.setAttribute("href", "css/style.css");
+        lightLink.disabled = false;
+        darkLink.disabled = true;
     }
+    isButton1Enabled = !isButton1Enabled;
 });
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
